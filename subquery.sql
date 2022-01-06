@@ -4,8 +4,15 @@ tambem em geral as subqueries tambem conseguem trazer os mesmos resultados que u
 mas nas subqueries vc pode explorar melhor os filtros ainda mais quando se trata de operacoes matematicas ou logicas
 */
 
-select g.nome, g.nacionalidade from gafanhotos g
-where g.id in (
-				select g.id from cursos c where g.id = c.idcurso)
-order by g.nome
-limit 0, 10;
+use cadastro;
+
+select * from gafanhotos;
+
+select g.nome, c.ano from gafanhotos as g
+join cursos as c on c.idcurso = g.cursopreferido
+where c.ano = 2021;
+
+select g.nome from gafanhotos g
+where g.cursopreferido in (
+				select g.cursopreferido from cursos c where g.cursopreferido = c.idcurso and c.ano = 2021)
+order by g.nome;
