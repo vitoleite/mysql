@@ -27,3 +27,12 @@ end as MediaCargaPorAula
 from cursos as c
 group by c.ano
 order by c.carga asc;
+
+-- Filtrando atraves do CASE
+select gf.nome, gf.nascimento, date_format(gf.nascimento, '%d-%m-%Y') as formatado,
+	case when gf.nome like '%Silva' then TRUE
+    end as check_name
+from gafanhotos as gf
+where case when gf.nome like '%Silva' then TRUE
+    end = TRUE
+;
