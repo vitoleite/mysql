@@ -1,7 +1,3 @@
-show databases;
-use dio_mysql;
-show tables;
-
 select v.title, a.author_name, v.likes, v.dislikes, s.categoria from videos v
 inner join seo s on v.fk_seo = s.id_seo
 inner join author a on v.fk_author = a.id_author;

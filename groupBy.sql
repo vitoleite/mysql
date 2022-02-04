@@ -8,7 +8,6 @@ from cursos
 group by ano
 order by total_aulas_ano;
 
-select * from cursos;
 
 select c.nome, c.ano, c.totaulas,
 case

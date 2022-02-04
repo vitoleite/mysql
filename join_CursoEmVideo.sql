@@ -1,7 +1,3 @@
-use cadastro;
-show tables;
-describe assiste_curso;
-
 create table assiste_curso (
 	id int not null auto_increment,
     Data_assistida date,
@@ -14,7 +10,6 @@ create table assiste_curso (
 
 insert into assiste_curso values (default, '2021-11-28', '1', '2');
 
-describe gafanhotos;
 
 select g.nome, c.nome, c.descricao, ac.data from gafanhotos as g
 inner join cursos as c on g.cursopreferido = c.idcurso
