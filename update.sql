@@ -10,7 +10,7 @@ set nome = 'PHP', ano = '2015'
 where idcurso = '4';
 
 
--- Limitando alterações a somente uma linha
+-- Limitando alterações a somente uma única linha
 update cursos
 set nome = 'Java', carga = '40', ano = '2015'
 where idcurso = '5'
