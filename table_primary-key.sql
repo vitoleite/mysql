@@ -1,3 +1,5 @@
+-- Creating the table Pessoas
+
 create table pessoas (
 id int not null auto_increment,
 nome varchar(30),
